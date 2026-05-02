@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter , Routes, Route } from 'react-router-dom';
 import NavigationBar from './components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -17,10 +17,16 @@ import Registro from './pages/Registro'
 
 function App() {
   return (
-    // 2. ENVOLVEMOS TODO CON EL CARTPROVIDER
+    // 1. El CartProvider envuelve todo para que el carrito y el usuario funcionen en cualquier página
     <CartProvider>
-      <Router>
+      
+      {/* 2. El BrowserRouter maneja la navegación y el basename para GitHub Pages */}
+      <BrowserRouter basename="/reto2-interfaces">
+        
+        {/* 3. Componentes fijos (se ven en todas las rutas) */}
         <NavigationBar />
+
+        {/* 4. Definición de rutas dinámicas */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tienda" element={<Tienda />} />
@@ -28,11 +34,14 @@ function App() {
           <Route path="/producto/:id" element={<ProductoDetalle />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/subir-producto" element={<SubirProducto />} />
-          <Route path="/login" element={<Login/>} />
-          <Route path="/registro" element={<Registro/>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/registro" element={<Registro />} />
         </Routes>
+
+        {/* 5. Footer fijo al final */}
         <Footer />
-      </Router>
+
+      </BrowserRouter>
     </CartProvider>
   );
 }

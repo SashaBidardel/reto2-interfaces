@@ -25,20 +25,7 @@ const Footer = () => {
             </p>
           </Col>
 
-          {/* Columna de Redes Sociales */}
-          <Col xs={12} md={4} className="text-center text-md-end">
-            <div id="iconos_redes" className="d-flex justify-content-center justify-content-md-end gap-3">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" className="text-white">
-                <i className="fab fa-pinterest-p"></i>
-              </a>
-            </div>
-          </Col>
+          
         </Row>
       </Container>
     </footer>
