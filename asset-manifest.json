@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9faa6972.css",
+    "main.js": "/static/js/main.4527a76e.js",
+    "static/js/453.9fd61171.chunk.js": "/static/js/453.9fd61171.chunk.js",
+    "static/media/billar.png": "/static/media/billar.2588d6579c3eb72633b5.png",
+    "static/media/juegos.png": "/static/media/juegos.30698a151c514664ca12.png",
+    "static/media/fachaleco.png": "/static/media/fachaleco.f4f5c66a2e990c077431.png",
+    "static/media/triciclo.png": "/static/media/triciclo.af3e294b5002648ab914.png",
+    "static/media/hogar.png": "/static/media/hogar.b541eca0f6c2c89bc27f.png",
+    "static/media/modern.png": "/static/media/modern.1e19264770878a29b08d.png",
+    "static/media/motosierra.png": "/static/media/motosierra.50fcf1bed5abafd75574.png",
+    "static/media/cccatch.png": "/static/media/cccatch.28dcc60bf33aa950b4aa.png",
+    "static/media/nostalgicos.png": "/static/media/nostalgicos.d96cc04dd35e7ddee0b1.png",
+    "static/media/producto.png": "/static/media/producto.8d0e7a9d12626c61aa8b.png",
+    "static/media/deportes.png": "/static/media/deportes.4a5f12dd03d7f7dabc69.png",
+    "static/media/electronica.png": "/static/media/electronica.68a30ca9b96ffd325635.png",
+    "static/media/spectrum.png": "/static/media/spectrum.e7a546cffa3d92783f6c.png",
+    "static/media/moda.png": "/static/media/moda.9f12adeeedd44b959454.png",
+    "static/media/logo.png": "/static/media/logo.a4359ae4ff9a855fa7aa.png",
+    "index.html": "/index.html",
+    "main.9faa6972.css.map": "/static/css/main.9faa6972.css.map",
+    "main.4527a76e.js.map": "/static/js/main.4527a76e.js.map",
+    "453.9fd61171.chunk.js.map": "/static/js/453.9fd61171.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9faa6972.css",
+    "static/js/main.4527a76e.js"
+  ]
+}
