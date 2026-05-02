@@ -1,38 +1,285 @@
-.App {
+/* --- RESET Y FUENTE --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap');
+
+* {
+  /* Elimina el recuadro azul/gris al tocar en móviles */
+  -webkit-tap-highlight-color: transparent !important;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif !important;
+  background-color: #f8f9fa;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- NAVBAR SIN CUADRO GRIS --- */
+.custom-navbar {
+  background-color: #12876f !important;
+  padding: 10px 0 !important;
+}
+
+/* ELIMINACIÓN DEL RECUADRO GRIS AL HACER FOCO/CLICK */
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none !important;
+  box-shadow: none !important; 
+  border: none !important;
+}
+
+.navbar-toggler-icon {
+  /* Asegura hamburguesa blanca */
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+/* Estilo de los enlaces del menú */
+.nav-link {
+  color: white !important;
+  font-weight: 600 !important;
+  margin: 0 10px;
+}
+
+/* --- SECCIÓN BOTONES PRINCIPALES --- */
+.seccion-botones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+#tienda {
+  background-color: #12876f !important;
+  color: white !important;
+  border-radius: 50px !important;
+  padding: 15px 35px !important;
+  font-weight: 700 !important;
+  border: none !important;
+}
+
+#subir_producto {
+  background-color: transparent !important;
+  color: #12876f !important;
+  border: 2px solid #12876f !important;
+  border-radius: 50px !important;
+  padding: 15px 35px !important;
+  font-weight: 700 !important;
+}
+
+/* --- TÍTULO CATEGORÍAS CENTRADO --- */
+.titulo-categorias-contenedor {
+  width: 100%;
+  display: flex !important;
+  justify-content: center !important; /* Centrado horizontal */
+  align-items: center !important;
+  margin: 60px 0 40px 0 !important;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.titulo-categorias-contenedor h2 {
+  color: #12876f !important;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin: 0 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* --- GRID 3x2 CON BORDES NEGROS --- */
+.contenedor-grid-fijo {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 30px;
+  max-width: 1140px;
+  margin: 0 auto 80px auto;
+  padding: 0 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.carta-categoria-pro {
+  background: white !important;
+  /* BORDE NEGRO DESTACADO */
+  border: 2px solid #000000 !important; 
+  border-radius: 20px !important;
+  padding: 25px !important;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carta-categoria-pro:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.titulo-cat-pro {
+  font-weight: 800 !important;
+  color: #333 !important;
+  text-transform: uppercase;
+  margin-bottom: 20px !important;
+  font-size: 1.1rem;
+}
+
+/* IMAGEN CIRCULAR */
+.contenedor-img-ajustada {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 4px solid #f1f1f1;
+}
+
+.contenedor-img-ajustada img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- FOOTER PRO --- */
+.footer-pro {
+  background-color: #1a1a1a !important;
+  color: white !important;
+  padding: 50px 0 !important;
+  border-top: 5px solid #12876f !important;
+  margin-top: auto;
+}
+
+#iconos_redes {
   display: flex;
-  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#iconos_redes a {
+  background-color: white;
+  color: #1a1a1a !important;
+  width: 45px;
+  height: 45px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-radius: 50%;
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+
+#iconos_redes a:hover {
+  background-color: #12876f;
+  color: white !important;
+  transform: scale(1.1);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #888;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* --- ESTILOS ESPECÍFICOS PARA PRODUCTOS EN CATEGORÍAS --- */
+
+/* Contenedor dinámico de la rejilla de productos */
+#categoria {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Ajuste fino para la carta de producto (reutilizando tu estilo) */
+.carta-categoria-pro {
+  height: 100%; /* Para que todas las cartas midan lo mismo en la misma fila */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px !important;
+}
+
+/* El precio del producto */
+.precio-producto {
+  color: #12876f;
+  font-weight: 900;
+  font-size: 1.4rem;
+  margin-top: 15px;
+  display: block;
+}
+
+/* Efecto hover extra para los productos */
+.carta-categoria-pro:hover .contenedor-img-ajustada {
+  border-color: #12876f; /* El aro de la foto se vuelve verde al pasar el ratón */
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* --- LIMPIEZA DE BOTONES DE ENLACE --- */
+a {
+  text-decoration: none !important; /* Quita el subrayado azul de los enlaces */
+}
+
+/* --- AJUSTE PARA EL TÍTULO DINÁMICO --- */
+.titulo-categorias-contenedor h2 {
+  border-bottom: 4px solid #12876f; /* Subrayado decorativo para el nombre de la categoría */
+  padding-bottom: 10px;
+  display: inline-block;
+}
+/* Estilo para la paginación */
+.custom-pagination .page-link {
+  color: #12876f; /* Tu verde */
+  border: 1px solid #dee2e6;
+}
+
+.custom-pagination .page-item.active .page-link {
+  background-color: #12876f !important;
+  border-color: #12876f !important;
+  color: white;
+}
+
+.custom-pagination .page-link:focus {
+  box-shadow: 0 0 0 0.25rem rgba(18, 135, 111, 0.25);
+}
+
+.titulo-principal {
+  color: #12876f;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -1px; /* Le da un toque más moderno y compacto */
+  margin: 0;
+}
+
+.subtitulo-tienda {
+  color: #6c757d; /* El gris de text-muted */
+  margin: 0;
+  font-size: 1.1rem;
+}
+/* --- RESPONSIVE --- */
+@media (max-width: 991px) {
+  .contenedor-grid-fijo { grid-template-columns: repeat(2, 1fr) !important; }
+  
+  .navbar-collapse {
+    background-color: #12876f;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+@media (max-width: 650px) {
+  .contenedor-grid-fijo { grid-template-columns: 1fr !important; }
+  .titulo-categorias-contenedor h2 { font-size: 1.8rem; }
 }

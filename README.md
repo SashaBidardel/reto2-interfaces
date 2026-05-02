@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# 🎮 Proyecto Tienda Retro - Reto 2 (DIW)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto representa la **evolución final** del sitio web desarrollado durante el Reto 1 para el módulo de **Diseño de Interfaces Web (2025/2026)**. En esta versión, se ha transformado el diseño inicial en una aplicación web interactiva, usable y accesible, siguiendo las directrices de la empresa DIW&CO.
 
-## Available Scripts
+## 🚀 Novedades de la Versión 2.0 (Reto Final)
 
-In the project directory, you can run:
+Partiendo de la base del Reto 1, esta entrega incluye las siguientes mejoras clave exigidas en el desarrollo del Reto 2[cite: 1]:
 
-### `npm start`
+### 1. Interactividad y Multimedia Avanzada
+- **Gestión Dinámica de Productos:** Implementación de un flujo completo para subir nuevos productos mediante formularios interactivos.
+- **Lógica de Negocio:** Uso de `React Context` para la gestión global del carrito de compra y la persistencia de productos en memoria durante la sesión.
+- **Contenido Multimedia:** Repositorio de imágenes optimizadas y uso de librerías para elementos interactivos[cite: 1].
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. Diseño Adaptativo (Responsive Design)
+Siguiendo los requisitos de usabilidad[cite: 1], la interfaz ha sido desarrollada para adaptarse a 4 tamaños de pantalla:
+- **Small (Móviles):** Menús colapsables (Hamburguesa) y rejillas de una sola columna.
+- **Medium (Tablets):** Ajuste de celdas y escalado de elementos multimedia.
+- **Large & Extra Large (Desktop):** Layout completo con aprovechamiento total del espacio visual[cite: 1].
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 3. Sistema de Usuarios
+- **Registro e Inicio de Sesión:** Flujo sencillo de autenticación con validación de datos.
+- **Personalización:** El Navbar se adapta dinámicamente mostrando un saludo personalizado ("Hola, [usuario]") al detectar una sesión activa.
 
-### `npm test`
+## 🛠️ Tecnologías Utilizadas
+Como recomienda el cliente DIW&CO[cite: 1], se han utilizado tecnologías actuales:
+- **ReactJS:** Core del proyecto para una interfaz SPA (Single Page Application).
+- **Bootstrap (React-Bootstrap):** Framework principal para el desarrollo adaptativo y componentes UI[cite: 1].
+- **Lucide-React:** Iconografía moderna y escalable.
+- **CSS3 Propio:** Hoja de estilos externa para definir una identidad visual única más allá de los estilos predefinidos de Bootstrap[cite: 1].
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 Estructura de Páginas (7-10 páginas)
+Cumpliendo con el catálogo mínimo requerido[cite: 1]:
+1. **Index:** Presentación visual de la marca.
+2. **Tienda (Catálogo):** Listado dinámico de todos los productos.
+3. **Categoría Detalle:** Filtrado inteligente de productos por sección.
+4. **Producto Detalle:** Vista ampliada con especificaciones técnicas.
+5. **Carrito de Compra:** Gestión de artículos y cálculo de totales.
+6. **Subir Producto:** Formulario avanzado para expansión del catálogo.
+7. **Login:** Acceso de usuarios.
+8. **Registro:** Creación de nuevas cuentas.
+9. **Contacto:** Formulario funcional de atención al cliente[cite: 1].
 
-### `npm run build`
+## ♿ Accesibilidad y Usabilidad
+Se ha realizado un estudio profundo siguiendo las pautas **WCAG**:
+- **Análisis Manual y Automático:** Verificación de niveles de conformidad mediante herramientas como WAVE[cite: 1].
+- **Mejora Continua:** Contraste entre el estado inicial del Reto 1 y las optimizaciones finales del Reto 2 para garantizar una experiencia inclusiva[cite: 1].
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🏗️ Instalación y Ejecución
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clona el repositorio.
+2. Instala las dependencias:
+   ```bash
+   npm install
