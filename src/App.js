@@ -21,7 +21,7 @@ function App() {
     <CartProvider>
       
       {/* 2. El BrowserRouter maneja la navegación y el basename para GitHub Pages */}
-      <BrowserRouter basename="/reto2-interfaces">
+      <BrowserRouter >
         
         {/* 3. Componentes fijos (se ven en todas las rutas) */}
         <NavigationBar />
