@@ -51,6 +51,7 @@ const NavigationBar = () => {
               <>
                 <Nav.Link as={Link} to="/login">LOGIN</Nav.Link>
                 <Nav.Link as={Link} to="/registro">REGISTRO</Nav.Link>
+                <Nav.Link as={Link} to="/multimedia">MULTIMEDIA</Nav.Link>
               </>
             )}
 

@@ -14,7 +14,7 @@ import SubirProducto from './pages/SubirProducto';
 import { CartProvider } from './context/CartContext'; 
 import Login from './pages/Login';
 import Registro from './pages/Registro'
-
+import Multimedia from './components/Multimedia';
 function App() {
   return (
     // 1. El CartProvider envuelve todo para que el carrito y el usuario funcionen en cualquier página
@@ -36,6 +36,7 @@ function App() {
           <Route path="/subir-producto" element={<SubirProducto />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registro" element={<Registro />} />
+          <Route path="/multimedia" element={<Multimedia />} />
         </Routes>
 
         {/* 5. Footer fijo al final */}

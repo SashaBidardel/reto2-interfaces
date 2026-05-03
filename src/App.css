@@ -267,6 +267,28 @@ a {
   margin: 0;
   font-size: 1.1rem;
 }
+.btn-multimedia-especial {
+  background: linear-gradient(45deg, #007bff, #00d4ff); /* Gradiente moderno */
+  color: white !important;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  transition: all 0.4s ease;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-multimedia-especial:hover {
+  transform: translateY(-3px) scale(1.05); /* Se eleva y crece un poco */
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.5);
+  background: linear-gradient(45deg, #00d4ff, #007bff); /* Invierte el gradiente */
+  color: #ffffff !important;
+}
 /* --- RESPONSIVE --- */
 @media (max-width: 991px) {
   .contenedor-grid-fijo { grid-template-columns: repeat(2, 1fr) !important; }
