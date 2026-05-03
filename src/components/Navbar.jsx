@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, Container, Badge, Button } from 'react-bootstrap'; // Añadido Button
-import logo from '../assets/logo.png';
 import { ShoppingCart } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 
@@ -17,7 +16,7 @@ const NavigationBar = () => {
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img
-            src={logo}
+            src="/assets/logo.png" alt="Logo"
             alt="Logo Mi Tienda"
             height="40"
             className="d-inline-block align-top"

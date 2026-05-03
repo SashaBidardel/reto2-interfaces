@@ -10,36 +10,52 @@ const ProductoDetalle = () => {
   const { addToCart } = useCart();
   const [cantidad, setCantidad] = useState(1);
 
+  // Buscamos el producto por ID
   const producto = productos.find(p => p.id === parseInt(id));
 
-  if (!producto) return <p>Producto no encontrado</p>;
+  if (!producto) return <Container className="py-5"><p>Producto no encontrado</p></Container>;
 
   const handleAdd = () => {
     addToCart(producto, cantidad);
-    navigate('/cart'); // Te lleva al carrito tras añadir
+    navigate('/cart');
   };
 
   return (
     <Container className="py-5">
-      <Row>
-        <Col md={6}>
-          <img src={producto.img} alt={producto.nombre} className="img-fluid rounded border" />
+      <Row className="align-items-center">
+        <Col md={6} className="text-center">
+          {/* Al empezar la ruta con / en el JS, React la encuentra siempre */}
+          <img 
+            src={producto.img} 
+            alt={producto.nombre} 
+            className="img-fluid rounded shadow-sm border" 
+            style={{ maxHeight: '400px', objectFit: 'contain' }}
+          />
         </Col>
         <Col md={6}>
-          <h2 style={{ color: '#12876f' }}>{producto.nombre}</h2>
-          <p className="fs-3 fw-bold">{producto.precio}</p>
+          <nav aria-label="breadcrumb">
+            <p className="text-muted small text-uppercase">{producto.cat}</p>
+          </nav>
+          <h2 className="display-5 fw-bold" style={{ color: '#12876f' }}>{producto.nombre}</h2>
+          <p className="fs-2 text-dark">{producto.precio}</p>
+          <hr />
           
-          <Form.Group className="mb-3" style={{ maxWidth: '100px' }}>
-            <Form.Label>Cantidad:</Form.Label>
+          <Form.Group className="mb-4" style={{ maxWidth: '120px' }}>
+            <Form.Label className="fw-bold">Cantidad:</Form.Label>
             <Form.Control 
               type="number" 
               value={cantidad} 
               min="1" 
-              onChange={(e) => setCantidad(parseInt(e.target.value))} 
+              onChange={(e) => setCantidad(Math.max(1, parseInt(e.target.value) || 1))} 
             />
           </Form.Group>
 
-          <Button onClick={handleAdd} style={{ backgroundColor: '#12876f', border: 'none' }}>
+          <Button 
+            onClick={handleAdd} 
+            size="lg"
+            className="w-100 w-md-auto"
+            style={{ backgroundColor: '#12876f', border: 'none', padding: '12px 40px' }}
+          >
             Añadir al Carrito
           </Button>
         </Col>

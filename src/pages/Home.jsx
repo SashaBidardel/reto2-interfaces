@@ -1,22 +1,17 @@
 import React from 'react';
 import { Container, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import NavigationBar from '../components/Navbar';
-import imgElectronica from '../assets/electronica.png';
-import imgHogar from '../assets/hogar.png';
-import imgDeportes from '../assets/deportes.png';
-import imgNostalgicos from '../assets/nostalgicos.png';
-import imgModa from '../assets/moda.png';
-import imgJuegos from '../assets/juegos.png';
 
 const Home = () => {
+  // Ahora el array de categorías usa directamente la ruta de texto
+  // No necesitas los "import" de arriba porque React los buscará en /public
   const categorias = [
-    { nombre: 'ELECTRONICA', img: imgElectronica },
-    { nombre: 'HOGAR', img: imgHogar },
-    { nombre: 'DEPORTES', img: imgDeportes },
-    { nombre: 'NOSTALGICOS', img: imgNostalgicos },
-    { nombre: 'MODA', img: imgModa },
-    { nombre: 'JUEGOS', img: imgJuegos },
+    { nombre: 'ELECTRONICA', img: '/assets/electronica.png' },
+    { nombre: 'HOGAR', img: '/assets/hogar.png' },
+    { nombre: 'DEPORTES', img: '/assets/deportes.png' },
+    { nombre: 'NOSTALGICOS', img: '/assets/nostalgicos.png' },
+    { nombre: 'MODA', img: '/assets/moda.png' },
+    { nombre: 'JUEGOS', img: '/assets/juegos.png' },
   ];
 
   return (
@@ -42,7 +37,7 @@ const Home = () => {
           <h2 className="fw-bold">CATEGORÍAS</h2>
         </div>
 
-        {/* 3. GRID DE CATEGORÍAS (Forzado 3x2) */}
+        {/* 3. GRID DE CATEGORÍAS (Dinamico con .map) */}
         <section className="contenedor-grid-fijo">
           {categorias.map((cat, index) => (
             <div key={index} className="columna-fija">
@@ -50,12 +45,13 @@ const Home = () => {
                 <Card.Body className="p-4 text-center">
                   <Card.Title className="titulo-cat-pro">{cat.nombre}</Card.Title>
                   
-                  {/*  ENLACE DINÁMICO */}
-                <Link to={`/categoria/${cat.nombre.toLowerCase()}`}>
-                  <div className="contenedor-img-ajustada shadow-sm">
-                    <Card.Img src={cat.img} alt={cat.nombre} />
-                  </div>
-                </Link>
+                  {/* ENLACE DINÁMICO */}
+                  <Link to={`/categoria/${cat.nombre.toLowerCase()}`}>
+                    <div className="contenedor-img-ajustada shadow-sm">
+                      {/* cat.img ahora contiene el texto "/assets/nombre.png" */}
+                      <Card.Img src={cat.img} alt={cat.nombre} />
+                    </div>
+                  </Link>
                 </Card.Body>
               </Card>
             </div>

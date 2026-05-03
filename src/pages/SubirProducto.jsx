@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container, Form, Button, Card, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
-import imgGenerica from '../assets/producto.png';
+
 
 const SubirProducto = () => {
   const { agregarProductoALaTienda } = useCart();
@@ -38,7 +38,7 @@ const SubirProducto = () => {
       ...datos,
       id: Date.now(),
       // Si no seleccionó archivo, usamos la genérica
-      img: datos.img ? datos.img : imgGenerica,
+      img: datos.img ? datos.img : "/assets/producto.png",
       precio: parseFloat(datos.precio)
     };
 
@@ -68,12 +68,13 @@ const SubirProducto = () => {
               <Form.Group className="mb-3">
                 <Form.Label className="fw-bold">Categoría</Form.Label>
                 <Form.Select required name="cat" onChange={handleChange}>
-                  <option value="moda">Moda</option>
+                  <option value="">Elige la categoría</option>
                   <option value="nostalgicos">Nostálgicos</option>
                   <option value="deportes">Deportes</option>
                   <option value="electronica">Electrónica</option>
                   <option value="hogar">Hogar</option>
                   <option value="juegos">Juegos</option>
+                  <option value="moda">Moda</option>
                 </Form.Select>
               </Form.Group>
 

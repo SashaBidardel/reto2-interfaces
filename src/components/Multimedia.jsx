@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import $ from 'jquery';
-import videoPromo from '../assets/videopromocion.mp4';
+
 const Multimedia = () => {
   useEffect(() => {
     // 1. Control del Vídeo: Efecto persiana
@@ -39,7 +39,7 @@ const Multimedia = () => {
         <div id="contenedor-video" style={{display: 'none', marginTop: '20px'}}>
           <div className="ratio ratio-16x9 shadow-lg rounded overflow-hidden">
             <video controls>
-              <source src={videoPromo} />
+              <source src="/assets/videopromocion.mp4" />
               Tu navegador no soporta vídeos.
             </video>
           </div>
