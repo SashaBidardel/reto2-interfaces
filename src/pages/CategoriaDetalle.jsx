@@ -42,7 +42,7 @@ const CategoriaDetalle = () => {
                     </div>
                     <span className="precio-producto">{prod.precio}</span>
                     <small className="text-uppercase text-muted d-block mt-2" style={{fontSize: '0.7rem'}}>
-                      Ref: {prod.id}
+                      Precio: {prod.precio}
                     </small>
                   </div>
                 </Link>

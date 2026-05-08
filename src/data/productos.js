@@ -7,4 +7,5 @@ export const productos = [
   { id: 6, nombre: 'Motosierra Gasolina', precio: '89 €', img: '/assets/motosierra.png', cat: 'hogar' },
   { id: 7, nombre: 'Triciclo Clásico', precio: '45 €', img: '/assets/triciclo.png', cat: 'deportes' },
   { id: 8, nombre: 'ZX Spectrum', precio: '120 €', img: '/assets/spectrum.png', cat: 'electronica' },
+  { id: 9, nombre: 'Camiseta Heavy', precio: '9.99 €', img: '/assets/heavy.png', cat: 'moda' },
 ];
