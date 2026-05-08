@@ -41,9 +41,7 @@ const CategoriaDetalle = () => {
                       <img src={prod.img} alt={prod.nombre} />
                     </div>
                     <span className="precio-producto">{prod.precio}</span>
-                    <small className="text-uppercase text-muted d-block mt-2" style={{fontSize: '0.7rem'}}>
-                      Precio: {prod.precio}
-                    </small>
+                    
                   </div>
                 </Link>
               </Col>
