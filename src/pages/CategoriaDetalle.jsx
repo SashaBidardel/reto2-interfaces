@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
-import { useCart } from '../context/CartContext'; // 1. Importamos el hook
+import { useCart } from '../context/CartContext'; 
 
 const CategoriaDetalle = () => {
   const { id } = useParams();

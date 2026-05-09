@@ -19,7 +19,7 @@ const Multimedia = () => {
       $(this).parent().find('.capa-info').fadeOut();
     });
 
-    // Limpieza al desmontar el componente (buena práctica)
+    // Limpieza al desmontar el componente 
     return () => {
       $('#boton-video').off('click');
       $('.foto-interactiva').off('mouseenter mouseleave');

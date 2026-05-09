@@ -24,7 +24,6 @@ const ProductoDetalle = () => {
     <Container className="py-5">
       <Row className="align-items-center">
         <Col md={6} className="text-center">
-          {/* Al empezar la ruta con / en el JS, React la encuentra siempre */}
           <img 
             src={producto.img} 
             alt={producto.nombre} 

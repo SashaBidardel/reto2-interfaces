@@ -78,7 +78,7 @@ const SubirProducto = () => {
                 </Form.Select>
               </Form.Group>
 
-              {/* CAMBIO AQUÍ: Input de tipo FILE */}
+            
               <Form.Group className="mb-4">
                 <Form.Label className="fw-bold">Imagen del Producto</Form.Label>
                 <Form.Control 
@@ -91,7 +91,7 @@ const SubirProducto = () => {
                 </Form.Text>
               </Form.Group>
 
-              {/* VISTA PREVIA (Opcional, muy útil) */}
+             
               {datos.img && (
                 <div className="text-center mb-3">
                   <p className="small text-muted">Vista previa:</p>

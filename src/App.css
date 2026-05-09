@@ -101,7 +101,6 @@ body {
 
 .carta-categoria-pro {
   background: white !important;
-  /* BORDE NEGRO DESTACADO */
   border: 2px solid #000000 !important; 
   border-radius: 20px !important;
   padding: 25px !important;
@@ -138,7 +137,7 @@ body {
   object-fit: cover;
 }
 
-/* --- FOOTER PRO --- */
+/* --- FOOTER  --- */
 .footer-pro {
   background-color: #1a1a1a !important;
   color: white !important;
@@ -202,7 +201,7 @@ body {
   padding: 20px 0;
 }
 
-/* Ajuste fino para la carta de producto (reutilizando tu estilo) */
+
 .carta-categoria-pro {
   height: 100%; /* Para que todas las cartas midan lo mismo en la misma fila */
   display: flex;
@@ -258,17 +257,17 @@ a {
   color: #12876f;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: -1px; /* Le da un toque más moderno y compacto */
+  letter-spacing: -1px; 
   margin: 0;
 }
 
 .subtitulo-tienda {
-  color: #6c757d; /* El gris de text-muted */
+  color: #6c757d; 
   margin: 0;
   font-size: 1.1rem;
 }
 .btn-multimedia-especial {
-  background: linear-gradient(45deg, #007bff, #00d4ff); /* Gradiente moderno */
+  background: linear-gradient(45deg, #007bff, #00d4ff); 
   color: white !important;
   border-radius: 8px;
   font-weight: 600;

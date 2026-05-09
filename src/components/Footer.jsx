@@ -6,7 +6,6 @@ const Footer = () => {
     <footer className="bg-dark text-white py-4 mt-5">
       <Container>
         <Row className="align-items-center">
-          {/* Columna de Texto - Ahora ocupa todo el ancho o se centra mejor */}
           <Col xs={12} className="text-center"> 
             <p className="mb-0">
               © 2026 **Segunda Oportunidad** – Una nueva vida para tus productos.

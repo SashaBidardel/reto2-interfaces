@@ -3,8 +3,7 @@ import { Container, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-  // Ahora el array de categorías usa directamente la ruta de texto
-  // No necesitas los "import" de arriba porque React los buscará en /public
+  
   const categorias = [
     { nombre: 'ELECTRONICA', img: '/assets/electronica.png' },
     { nombre: 'HOGAR', img: '/assets/hogar.png' },
@@ -48,7 +47,6 @@ const Home = () => {
                   {/* ENLACE DINÁMICO */}
                   <Link to={`/categoria/${cat.nombre.toLowerCase()}`}>
                     <div className="contenedor-img-ajustada shadow-sm">
-                      {/* cat.img ahora contiene el texto "/assets/nombre.png" */}
                       <Card.Img src={cat.img} alt={cat.nombre} />
                     </div>
                   </Link>
